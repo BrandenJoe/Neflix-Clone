@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 const TitleCards = ({title, category}) => {
 
 
-  const [apiData, setApiData] = useState([])
+  const [apiData, setApiData] = useState([]);
   const cardsRef = useRef();
 
   const options = {
@@ -26,9 +26,10 @@ const TitleCards = ({title, category}) => {
   
   useEffect(()=>{
 
-    fetch(`https://api.themoviedb.org/3/movie/${category? category:"now_playing"}?language=en-US&page=1`, options)
-    .then(res => res.json())
-    .then(res => setApiData(response.result))
+    fetch(`https://api.themoviedb.org/3/movie/${category?
+       category:"now_playing"}?language=en-US&page=1`, options)
+    .then(response => response.json())
+    .then(response => setApiData(response.results))
     .catch(err => console.error(err));
 
     cardsRef.current.addEventListener('wheel',handleWheel)
@@ -45,7 +46,8 @@ const TitleCards = ({title, category}) => {
         <p>{card.original_title}</p>
         </Link>
 
-      })}</div>
+      })}
+      </div>
     </div>
   )
 }
