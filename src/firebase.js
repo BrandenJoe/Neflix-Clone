@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { toast } from "react-toastify";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -38,7 +39,7 @@ email,
 })
 } catch(err){
   console.log(err) 
-  alert(err);
+  toast.error(error.code.split('/'){1}.split('-').join(" "))
 }
 
 }
@@ -50,8 +51,7 @@ const login = async (email, password) => {
 
   } catch(err){
     console.log(err)
-    alert(err);
-  }
+    toast.error(error.code.split('/'){1}.split('-').join(" "))  }
 }
 
 const logout = () => {
