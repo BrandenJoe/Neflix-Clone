@@ -27,3 +27,13 @@ list-style: none;
     font-size: 14px;
     
 }
+@media (max-width:800px) {
+    .footer_icons img{
+        width: 25px;
+    }
+    .footer_icons ul{
+        grid-template-columns: auto auto;
+        gap: 8px;
+        font-size: 14px;
+    }
+}
