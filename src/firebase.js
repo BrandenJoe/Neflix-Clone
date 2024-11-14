@@ -39,7 +39,7 @@ email,
 })
 } catch(err){
   console.log(err) 
-  toast.error(error.code.split('/'){1}.split('-').join(" "))
+  toast.error(error.code.split('/')[1].split('-').join(" "))
 }
 
 }
@@ -51,7 +51,7 @@ const login = async (email, password) => {
 
   } catch(err){
     console.log(err)
-    toast.error(error.code.split('/'){1}.split('-').join(" "))  }
+    toast.error(error.code.split('/')[1].split('-').join(" "))  }
 }
 
 const logout = () => {
