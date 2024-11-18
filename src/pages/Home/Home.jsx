@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import NavBar from '../../components/NavBar/NavBar'
+import NavBar from '../../components/Navbar/Navbar'
 import hero_banner from '../../assets/hero_banner.jpg'
 import hero_title from '../../assets/hero_title.png'
 import Play_icon from '../../assets/Play_icon.png'
